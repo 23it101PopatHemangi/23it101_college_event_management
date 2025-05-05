@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Connect to MongoDB
-const dbName = 'college_events_23IT111';
+const dbName = 'college_events_23IT101';
 const mongoURI = process.env.MONGO_URI || `mongodb://localhost:27017/${dbName}`;
 
 mongoose.connect(mongoURI, {
