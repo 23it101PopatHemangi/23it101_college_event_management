@@ -1,44 +1,70 @@
-# `append-field`
+# Getting Started with Create React App
 
-A [W3C HTML JSON forms spec](http://www.w3.org/TR/html-json-forms/) compliant
-field appender (for lack of a better name). Useful for people implementing
-`application/x-www-form-urlencoded` and `multipart/form-data` parsers.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-It works best on objects created with `Object.create(null)`. Otherwise it might
-conflict with variables from the prototype (e.g. `hasOwnProperty`).
+## Available Scripts
 
-## Installation
+In the project directory, you can run:
 
-```sh
-npm install --save append-field
-```
+### `npm start`
 
-## Usage
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-```javascript
-var appendField = require('append-field')
-var obj = Object.create(null)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-appendField(obj, 'pets[0][species]', 'Dahut')
-appendField(obj, 'pets[0][name]', 'Hypatia')
-appendField(obj, 'pets[1][species]', 'Felis Stultus')
-appendField(obj, 'pets[1][name]', 'Billie')
+### `npm test`
 
-console.log(obj)
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-```text
-{ pets:
-   [ { species: 'Dahut', name: 'Hypatia' },
-     { species: 'Felis Stultus', name: 'Billie' } ] }
-```
+### `npm run build`
 
-## API
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### `appendField(store, key, value)`
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Adds the field named `key` with the value `value` to the object `store`.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## License
+### `npm run eject`
 
-MIT
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
